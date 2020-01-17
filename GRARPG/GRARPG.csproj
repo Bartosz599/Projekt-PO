@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D25790A-1BF2-498E-B569-E1D7D9D7F856}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GRARPG</RootNamespace>
+    <AssemblyName>EpicArena</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Character.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sklep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sklep.Designer.cs">
+      <DependentUpon>Sklep.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sklep.resx">
+      <DependentUpon>Sklep.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fight.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvlup.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dex3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drzewiec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dzikus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goblin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minotaur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mumia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\przeklety.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\szkielet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wilkolak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yeti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BloodPresence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PoisonCleansingTotem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armor3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laska1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laska2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laska3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miecz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miecz2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sztylet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sztylet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sztylet3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topor do rzucania.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kij.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koszula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miecz3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klepsydra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pazury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kkunai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kula ognia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rzut.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic-blast.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sword atack.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fireball.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pazury.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
